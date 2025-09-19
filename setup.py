@@ -7,12 +7,12 @@ def get_requirements(file_path:str)-> List[str]:
     requirements=[]
     with open(file_path) as path:
         requirements= path.readlines()
-        requirements = [ req.replace("/n" , "")  for req in requirements]
+        requirements = [ req.replace("\n" , "")  for req in requirements]
 
     if HYPEN in requirements:
         requirements.remove(HYPEN)
 
-    return
+    return requirements
 
 
 setup(
